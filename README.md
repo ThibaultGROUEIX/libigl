@@ -1,4 +1,28 @@
 # libigl - A simple C++ geometry processing library
+
+# EDIT BY THIBAULT
+
+Compiling the samples :
+
+```shell
+ sudo apt-get install xorg-dev libglu1-mesa-dev
+cd tutorial
+mkdir build && cd build
+cmake .. & make -j 16
+```
+
+
+
+
+
+# END EDIT
+
+
+
+
+
+
+
 [![Build Status](https://travis-ci.org/libigl/libigl.svg?branch=master)](https://travis-ci.org/libigl/libigl)
 [![Build status](https://ci.appveyor.com/api/projects/status/mf3t9rnhco0vhly8/branch/master?svg=true)](https://ci.appveyor.com/project/danielepanozzo/libigl-6hjk1/branch/master)
 ![](libigl-teaser.png)
