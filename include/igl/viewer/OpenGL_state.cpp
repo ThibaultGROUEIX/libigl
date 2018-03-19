@@ -396,7 +396,7 @@ IGL_INLINE void igl::viewer::OpenGL_state::init()
   "  Ksi = Ks;"
   "  texcoordi = texcoord;"
   "}";
-
+// fragment shader used in screen capture
   std::string mesh_fragment_shader_string =
   "#version 150\n"
   "uniform mat4 model;"
