@@ -110,11 +110,11 @@ int main(int argc, char *argv[])
   // Plot the mesh and register the callback
   igl::viewer::Viewer viewer;
 
-  float dist = 4;
+  float dist = 3;
   // It all happens here !
   Eigen::Vector3f camera_center = Eigen::Vector3f(0,0,0);
   Eigen::Vector3f camera_eye    = Eigen::Vector3f(dist,dist,dist).normalized()*dist;
-  Eigen::Vector3f camera_up     = Eigen::Vector3f(0,1,0);
+  Eigen::Vector3f camera_up     = Eigen::Vector3f(0,0.6,0);
 
 
     viewer.core.camera_center = camera_center;
@@ -208,7 +208,7 @@ float fresnel_factor = 0;
 }
 vec3 Is = Ls * vec3(Ksi) * specular_factor;    // specular intensity
 vec3 If = Lf * vec3(Kfi) * fresnel_factor;     // fresnel intensity
-vec4 color = vec4(lighting_factor * (If + Is + Id) + Ia +
+vec4 color = vec4(lighting_factor * ( Id) + Ia +
   (1.0-lighting_factor) * vec3(Kdi),(Kai.a+Ksi.a+Kdi.a)/3);
 outColor = mix(vec4(1,1,1,1), texture(tex, texcoordi), texture_factor) * color;
 if (fixed_color != vec4(0.0)) outColor = fixed_color;
